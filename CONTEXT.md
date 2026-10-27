@@ -50,7 +50,7 @@ _Avoid_: about section, bio
 ### The work
 
 **Work**:
-Something Sean designed and built solo, with AI assistance, for real use. There are two, both for T3CK Group: the corporate website (designed from scratch) and the ERP.
+Something Sean designed and built solo, with AI assistance, for a real business. There are three: two in use at T3CK Group (the corporate website, designed from scratch, and the ERP), and Trabilis, his senior capstone for Lindela Travel & Tours. The agency never adopted Trabilis, so it is always labelled as a capstone and never described as in use.
 _Avoid_: project (unqualified), portfolio piece
 
 **Study**:

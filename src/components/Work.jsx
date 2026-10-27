@@ -11,7 +11,7 @@ export default function Work() {
           Work
         </h2>
         <p className="section-sub" data-reveal>
-          Two systems for one company, each designed, built and shipped by one engineer.
+          Three systems, each designed and built end to end by one engineer.
         </p>
       </header>
 
@@ -47,7 +47,7 @@ export default function Work() {
               </div>
               {w.link && (
                 <div>
-                  <dt>Live</dt>
+                  <dt>{w.link.term ?? 'Live'}</dt>
                   <dd>
                     <a href={w.link.href} target="_blank" rel="noreferrer" className="text-link">
                       {w.link.label} <span aria-hidden="true">↗</span>

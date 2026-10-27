@@ -87,6 +87,35 @@ export const WORKS = [
       },
     ],
   },
+  {
+    id: 'trabilis',
+    index: '03',
+    title: 'Trabilis',
+    kind: 'Senior capstone — a travel booking system for Lindela Travel & Tours',
+    year: 'Jun 2025 — Jan 2026',
+    role: 'Architecture, design & development, solo',
+    stack: ['React', 'Node.js', 'Supabase', 'Amadeus API', 'Stripe'],
+    link: { term: 'Code', href: 'https://github.com/seansoriano13/trabilis-app', label: 'seansoriano13/trabilis-app' },
+    summary:
+      'A booking system designed to take a travel agency’s flight, tour and visa bookings off manual records. Customers search, pay and track their bookings online; staff work each one from an admin side with roles, task assignment and sales reports.',
+    highlights: [
+      {
+        src: '/shots/trabilis-flights.webp',
+        title: 'Flight search',
+        body: 'Fares come straight from the Amadeus flight API, searched by route, date and passengers, then booked and paid for by card through Stripe.',
+      },
+      {
+        src: '/shots/trabilis-tours.webp',
+        title: 'Tour packages',
+        body: 'Every package lists its departure dates and price per person, and destinations open as 360° panoramas, so a customer can look around a place before booking it.',
+      },
+      {
+        src: '/shots/trabilis-itinerary.webp',
+        title: 'Itinerary by email',
+        body: 'A confirmed flight becomes a PDF itinerary, with PNR, passengers, fare breakdown and baggage allowance, emailed straight to the customer.',
+      },
+    ],
+  },
 ]
 
 export const STUDY = {
