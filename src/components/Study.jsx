@@ -1,3 +1,4 @@
+import Shot from './Shot'
 import { STUDY } from '../data/content'
 
 export default function Study() {
@@ -5,7 +6,7 @@ export default function Study() {
     <section id="study" className="section study" aria-labelledby="study-title">
       <header className="section-head">
         <span className="section-index" data-reveal>
-          (02)
+          (05)
         </span>
         <h2 className="section-title" data-split>
           Study
@@ -16,9 +17,7 @@ export default function Study() {
       </header>
 
       <article className="study-card">
-        <figure className="shot" data-clip>
-          <img src={STUDY.shot.src} alt={STUDY.shot.alt} loading="lazy" decoding="async" />
-        </figure>
+        <Shot src={STUDY.shot.src} alt={STUDY.shot.alt} />
         <div className="study-text">
           <h3 id="study-title" className="work-title" data-split>
             {STUDY.title}

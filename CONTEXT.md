@@ -53,6 +53,30 @@ _Avoid_: about section, bio
 Something Sean designed and built solo, with AI assistance, for a real business. There are three: two in use at T3CK Group (the corporate website, designed from scratch, and the ERP), and Trabilis, his senior capstone for Lindela Travel & Tours. The agency never adopted Trabilis, so it is always labelled as a capstone and never described as in use.
 _Avoid_: project (unqualified), portfolio piece
 
+**Work Index**:
+The numbered list of every Work that opens the Work section. Hovering a row brings up a preview of it.
+_Avoid_: table of contents, project list
+
+**Services**:
+The three kinds of thing Sean builds for clients: business systems, websites designed from scratch, and booking and payments. Each points at the Work that proves it.
+_Avoid_: offerings, packages
+
+**Process**:
+How Sean builds, in four steps, ending with the release check.
+_Avoid_: workflow, method
+
+**Toolbox**:
+Every tool named in the Work, grouped by the layer it sits in. Nothing is listed that no Work used.
+_Avoid_: skills, tech stack (the Portrait Notes' short Stack is a different, smaller list)
+
+**Path**:
+Where the work has happened so far, newest first, ending at Our Lady of Fatima University, Antipolo, where Trabilis was built.
+_Avoid_: timeline, experience, résumé
+
+**Checker**:
+Sophia "Pea" Kubo, Quality Control, who checks every release before it ships. The Process and the footer credit her; they are the only places this site points at hers.
+_Avoid_: QA, tester
+
 **Study**:
 A recreation of someone else's design made for practice, always labelled as one. The Anduril recreation is the only Study.
 _Avoid_: clone (in visitor-facing copy), project

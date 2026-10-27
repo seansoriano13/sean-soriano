@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import { PERSON } from '../data/content'
+import Mark from './Mark'
+import { CHECKER, PERSON, TOOLBOX } from '../data/content'
+
+const TOOLS = TOOLBOX.flatMap((g) => g.tools)
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
@@ -17,7 +20,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact" aria-labelledby="contact-title">
       <span className="section-index" data-reveal>
-        (03)
+        (07)
       </span>
       <h2 id="contact-title" className="contact-title" data-split>
         Have something to build?
@@ -32,11 +35,25 @@ export default function Contact() {
           </span>
         </button>
       </div>
+      {/* The Toolbox again, as one strip that never stops. */}
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {[...TOOLS, ...TOOLS].map((t, i) => (
+            <span key={i} className="marquee-item">
+              {t}
+              <Mark className="marquee-mark" strokeWidth={3} />
+            </span>
+          ))}
+        </div>
+      </div>
       <footer className="footer" data-reveal>
         <a href={PERSON.github} target="_blank" rel="noreferrer" className="text-link">
           GitHub <span aria-hidden="true">↗</span>
         </a>
         <span>© 2026 {PERSON.name}</span>
+        <a href={CHECKER.href} target="_blank" rel="noreferrer" className="text-link">
+          Releases checked by {CHECKER.name} <span aria-hidden="true">↗</span>
+        </a>
         <span>Built with React, GSAP and Lenis</span>
       </footer>
     </section>

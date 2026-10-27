@@ -1,3 +1,5 @@
+import Shot from './Shot'
+import WorkIndex from './WorkIndex'
 import { WORKS } from '../data/content'
 
 export default function Work() {
@@ -15,8 +17,10 @@ export default function Work() {
         </p>
       </header>
 
+      <WorkIndex />
+
       {WORKS.map((w) => (
-        <article key={w.id} className={`work-item work-${w.id}`} aria-labelledby={`${w.id}-title`}>
+        <article key={w.id} id={`work-${w.id}`} className={`work-item work-${w.id}`} aria-labelledby={`${w.id}-title`}>
           <div className="work-top">
             <span className="work-index" data-reveal>
               {w.index}
@@ -64,9 +68,7 @@ export default function Work() {
           {w.shots && (
             <div className="shots">
               {w.shots.map((s, i) => (
-                <figure key={s.src} className={`shot shot-${i}`} data-clip>
-                  <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
-                </figure>
+                <Shot key={s.src} className={`shot-${i}`} src={s.src} alt={s.alt} />
               ))}
             </div>
           )}
@@ -75,9 +77,7 @@ export default function Work() {
             <ol className="highlights">
               {w.highlights.map((h, i) => (
                 <li key={h.title} className="highlight">
-                  <figure className="shot" data-clip>
-                    <img src={h.src} alt={`${w.title}: ${h.title}`} loading="lazy" decoding="async" />
-                  </figure>
+                  <Shot src={h.src} alt={`${w.title}: ${h.title}`} />
                   <div className="highlight-text" data-reveal>
                     <span className="highlight-index">{String(i + 1).padStart(2, '0')}</span>
                     <h4 className="highlight-title">{h.title}</h4>

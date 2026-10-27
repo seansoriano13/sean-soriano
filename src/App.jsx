@@ -8,10 +8,15 @@ import Nav from './components/Nav'
 import Dive from './components/Dive'
 import PortraitNotes from './components/PortraitNotes'
 import Work from './components/Work'
+import Services from './components/Services'
+import Process from './components/Process'
+import Toolbox from './components/Toolbox'
 import Study from './components/Study'
+import Path from './components/Path'
 import Contact from './components/Contact'
 import { loadFrames, pickFrameSet } from './lib/frames'
 import { lockScroll, startSmoothScroll, stopSmoothScroll } from './lib/smoothScroll'
+import { FINE_POINTER, pointerParallax } from './lib/parallax'
 
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP)
 ScrollTrigger.config({ ignoreMobileResize: true })
@@ -61,7 +66,11 @@ export default function App() {
         <PortraitNotes variant="flow" />
         <Reveals ready={entered} reduced={reduced} />
         <Work />
+        <Services />
+        <Process />
+        <Toolbox />
         <Study />
+        <Path />
         <Contact />
       </main>
     </>
@@ -69,11 +78,18 @@ export default function App() {
 }
 
 // Scroll-in motion for everything below the Dive: text rises, titles come up
-// line by line from behind a mask, screenshots unclip and drift.
+// line by line from behind a mask, screenshots unclip and drift through their
+// bleed, and anything marked [data-parallax] leans with the cursor.
 function Reveals({ ready, reduced }) {
   useGSAP(
     () => {
       if (!ready || reduced) return
+
+      const mm = gsap.matchMedia()
+      mm.add(FINE_POINTER, () => {
+        const off = gsap.utils.toArray('[data-parallax]').map(pointerParallax)
+        return () => off.forEach((fn) => fn())
+      })
 
       gsap.utils.toArray('[data-split]').forEach((el) => {
         SplitText.create(el, {
@@ -112,8 +128,8 @@ function Reveals({ ready, reduced }) {
         )
         gsap.fromTo(
           img,
-          { yPercent: -2, scale: 1.04 },
-          { yPercent: 2, scale: 1.04, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } },
+          { yPercent: -4 },
+          { yPercent: 4, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } },
         )
       })
     },

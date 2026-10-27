@@ -5,6 +5,13 @@ export const PERSON = {
   github: 'https://github.com/seansoriano13',
 }
 
+// The Checker: Pea checks every release before it ships.
+export const CHECKER = {
+  name: 'Sophia Kubo',
+  role: 'Quality Control',
+  href: 'https://sophia-kubo.vercel.app/',
+}
+
 export const HERO = {
   headlineA: ['Built for', 'real work'],
   headlineB: ['Tuned to', 'the detail'],
@@ -100,6 +107,11 @@ export const WORKS = [
       'A booking system designed to take a travel agency’s flight, tour and visa bookings off manual records. Customers search, pay and track their bookings online; staff work each one from an admin side with roles, task assignment and sales reports.',
     highlights: [
       {
+        src: '/shots/trabilis-home.webp',
+        title: 'Agency home',
+        body: 'The agency’s front door: destinations, visa consultancy, flights and booking tracking in one menu, with the chatbot a tap away in the corner.',
+      },
+      {
         src: '/shots/trabilis-flights.webp',
         title: 'Flight search',
         body: 'Fares come straight from the Amadeus flight API, searched by route, date and passengers, then booked and paid for by card through Stripe.',
@@ -127,4 +139,64 @@ export const STUDY = {
   summary:
     'Rebuilding a site I admire, scroll by scroll, to learn how its motion and layout hold together. The design is Anduril’s; the code is mine.',
   shot: { src: '/shots/study-anduril.webp', alt: 'Recreation of the Anduril homepage' },
+}
+
+export const SERVICES = [
+  {
+    title: 'Business systems',
+    body: 'The internal tools a company runs on every day: records, approvals, dashboards and printed forms, built around how the business already talks about its work.',
+    proof: { label: 'T3CK Group ERP', href: '#work-erp' },
+  },
+  {
+    title: 'Websites, designed from scratch',
+    body: 'A site designed from a blank canvas and built by the same person, so nothing gets lost between the design and the code.',
+    proof: { label: 'T3CK Group website', href: '#work-website' },
+  },
+  {
+    title: 'Booking and payments',
+    body: 'Search, booking and card payments wired to real APIs, with the confirmations and the admin side that come after the sale.',
+    proof: { label: 'Trabilis', href: '#work-trabilis' },
+  },
+]
+
+export const PROCESS = [
+  {
+    title: 'Sit with the people who do the work',
+    body: 'Before any screen, I learn how the job is done today: the paper forms, the spreadsheets and the side-channel messages it runs on.',
+  },
+  {
+    title: 'Name things the way the business does',
+    body: 'I keep a glossary of the business’s own words and build around it, so a Stage in the software is a Stage on the sales floor.',
+  },
+  {
+    title: 'Ship small, every day',
+    body: 'Over two thousand commits on one ERP since March 2026: small changes, shipped and used, instead of one big reveal.',
+  },
+  {
+    title: 'Nothing ships unchecked',
+    body: 'Every release goes past a second pair of eyes before it reaches anyone: Sophia Kubo, my Quality Control.',
+    checker: true,
+  },
+]
+
+// Every tool named in the Work, by the layer it sits in.
+export const TOOLBOX = [
+  { layer: 'Interface', tools: ['React', 'Vite', 'Tailwind', 'GSAP', 'Lenis'] },
+  { layer: 'Data', tools: ['Supabase', 'Postgres + RLS', 'Node.js'] },
+  { layer: 'Integrations', tools: ['Amadeus API', 'Stripe', 'pdf-lib'] },
+  { layer: 'Working with', tools: ['Claude', 'GitHub', 'Vercel'] },
+]
+
+export const PATH = {
+  stops: [
+    { when: 'Mar 2026 — now', where: 'T3CK Group', what: 'The corporate website and the ERP the company runs on, designed and built solo.', href: '#work-website' },
+    { when: 'Jun 2025 — Jan 2026', where: 'Trabilis', what: 'Senior capstone: a travel booking system for Lindela Travel & Tours.', href: '#work-trabilis' },
+    { when: '2026', where: 'Anduril', what: 'A Study: rebuilding a site I admire to learn its motion and layout.', href: '#study' },
+  ],
+  school: {
+    name: 'Our Lady of Fatima University',
+    campus: 'Antipolo',
+    note: 'Where Trabilis was built, as my senior capstone.',
+    seal: { src: '/img/olfu-seal.webp', alt: 'Our Lady of Fatima University seal' },
+  },
 }
