@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 90 90" fill="none">
+  <style>
+    .ink { stroke: #141210 } .lens { fill: #ffffff }
+    @media (prefers-color-scheme: dark) { .ink { stroke: #f6f4ef } .lens { fill: #141210 } }
+  </style>
+  <!-- Sean's glasses mark (portfolio-logo.svg), heavier stroke for tab size -->
+  <g class="ink" stroke-width="4.2" stroke-linecap="round">
+    <circle class="lens" cx="32" cy="50" r="16" />
+    <ellipse class="lens" cx="70" cy="55" rx="14.5" ry="15.5" transform="rotate(4 70 55)" />
+    <path d="M48 49.5L55.5 53.5" />
+    <path d="M16 50H10" opacity="0.4" />
+  </g>
+</svg>

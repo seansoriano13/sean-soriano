@@ -1,0 +1,12 @@
+node_modules
+dist
+.vercel
+
+# Source media; the site ships the processed copies in public/
+/frames
+/*.mp4
+/*.jpg
+/*.png
+
+# Local editor/agent config
+.claude
